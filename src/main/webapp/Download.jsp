@@ -1,3 +1,4 @@
+<%@page import="utils.JSFunction"%>
 <%@page import="java.io.InputStream"%>
 <%@page import="java.io.File"%>
 <%@page import="java.io.FileNotFoundException"%>
@@ -5,9 +6,8 @@
 <%@page import="java.io.FileInputStream"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import= "" %>
 <%
-String saveDirectory = application.getRealPath("/Uploads");
+String saveDirectory = "D:/uploads";
 String saveFilename = request.getParameter("sName");
 String originalFilename = request.getParameter("oName");
 
@@ -57,13 +57,3 @@ catch(Exception e) {
 	JSFunction.alertBack("예외가 발생하였습니다.", out);
 }
 %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
